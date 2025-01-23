@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>BlazerChat</title>
+</head>
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <h1>BlazerChat</h1>
+            <a href="index.html" class="btn">Trocar de Sala</a>
+        </header>
+
+        <main class="chat-main">
+            <div class="chat-sidebar">
+                <h3>Sala de:</h3>
+                <h2 id="room-name"></h2>
+                <h3>Usuários Online:</h3>
+                <ul id="users"></ul>
+            </div>
+
+            <div class="chat-messages"></div>
+        </main>
+
+        <div class="chat-form-container">
+            <form id="chat-form">
+                <input id="msg" name="message" type="text" placeholder="Digite sua mensagem" required autocomplete="off">
+                <button class="btn" type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/qs.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
